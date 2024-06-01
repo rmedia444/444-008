@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <title>Huaiyuan County Xinyue Materials Trading Co., Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    
+
+    <style>
+        .bg-about{
+            background-color: #011622;
+        }
+        .bg-footer{
+            background-color: #011622;
+        }
+        .bg-icons{
+            background-color: #113257;
+        }
+        .bg-cards{
+            background-color: #012c46;
+        }
+        .bg-cover-home {
+            background-image: url('./assets/bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-cover-contact {
+            background-image: url('./assets/footerbg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                background-color: #09354e !important; /* bg-neutral-700 */
+            }
+            
+        }
+            /* Container for the logo and text content */
+        footer .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Logo size */
+        footer img {
+            height: 40px; /* Adjust the height as needed */
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const homeSection = document.getElementById('home');
+            const homeSectionHeight = homeSection.offsetHeight;
+
+            if (window.scrollY > homeSectionHeight || window.innerWidth <= 768) {
+                navbar.classList.add('bg-neutral-700');
+            } else {
+                navbar.classList.remove('bg-neutral-700');
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar bg-transparent fixed w-full z-10 top-0">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="text-white hover:text-blue-500">Home</a>
+                <a href="#about" class="text-white hover:text-blue-500">About</a>
+                <a href="#contact" class="text-white hover:text-blue-500">Contact</a>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <a href="#home" class="block text-white hover:text-blue-500 px-4 py-2">Home</a>
+            <a href="#about" class="block text-white hover:text-blue-500 px-4 py-2">About</a>
+            <a href="#contact" class="block text-white hover:text-blue-500 px-4 py-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="bg-cover-home text-white h-screen flex items-center justify-center relative">
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-80"></div>
+        <div class="text-center relative z-10">
+            <h1 class="text-5xl font-bold mb-4">Huaiyuan County Xinyue Materials Trading Co., Ltd.</h1>
+            <p class="text-sm  md:text-xl mb-8 subtitle">Building Trust, Delivering Quality Materials</p>
+            <a href="#about" class="bg-white text-black py-2 px-4 rounded-full">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 text-white bg-about" >
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Services</h2>
+            <p class="text-center text-xl mb-12">Your Reliable Partner in Premium Materials and Logistics</p>
+            <div class="flex flex-wrap">
+                <!-- Text and Icon Cards -->
+                <div class="w-full md:w-1/2 px-4">
+                    <div class="mb-8 p-6 bg-cards rounded-lg flex items-start">
+                        <div class="w-12 h-12 flex-shrink-0 bg-icons rounded-full flex items-center justify-center mr-4">
+                            <svg class="h-8 w-8 text-cyan-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8" />  <line x1="13" y1="7" x2="13" y2="7.01" />  <line x1="17" y1="7" x2="17" y2="7.01" />  <line x1="17" y1="11" x2="17" y2="11.01" />  <line x1="17" y1="15" x2="17" y2="15.01" /></svg>
+
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Coal and Building Materials</h3>
+                            <p>
+At Huaiyuan County Xinyue Materials Trading Co., Ltd., we specialize in the wholesale and retail of high-quality coal and a variety of essential building materials. Our coal offerings are sourced from reliable suppliers, ensuring consistency and efficiency for your energy needs. In addition, we provide a comprehensive range of building materials, including sand, gravel, and cement products, suitable for various construction and infrastructure projects. Our commitment to quality and reliability ensures that your projects are built on a solid foundation, meeting all your construction requirements with premium materials.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-8 p-6 bg-cards rounded-lg flex items-start">
+                        <div class="w-12 h-12 flex-shrink-0 bg-icons rounded-full flex items-center justify-center mr-4">
+                            <svg class="h-8 w-8 text-cyan-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8" />  <line x1="13" y1="7" x2="13" y2="7.01" />  <line x1="17" y1="7" x2="17" y2="7.01" />  <line x1="17" y1="11" x2="17" y2="11.01" />  <line x1="17" y1="15" x2="17" y2="15.01" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Cement Products</h3>
+                            <p> 
+                                Our extensive range of cement products is designed to meet the diverse needs of the construction industry. At Huaiyuan County Xinyue Materials Trading Co., Ltd., we offer various types of cement products that cater to different applications, from residential to commercial and industrial projects. Our products are known for their strength, durability, and consistent quality, ensuring that your construction projects achieve the highest standards. Whether you need cement for laying foundations, creating structures, or finishing surfaces, our selection is tailored to provide the best results for your specific needs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-cards rounded-lg flex items-start">
+                        <div class="w-12 h-12 flex-shrink-0 bg-icons rounded-full flex items-center justify-center mr-4">
+                            <svg class="h-8 w-8 text-cyan-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="3" y1="19" x2="21" y2="19" />  <rect x="5" y="6" width="14" height="10" rx="1" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Electrical Appliances</h3>
+                            <p>
+                                In addition to our building materials, we offer a wide selection of electrical appliances to meet the demands of both residential and commercial customers. Huaiyuan County Xinyue Materials Trading Co., Ltd. provides high-quality electrical appliances that are essential for modern living and working environments. From everyday household items to specialized equipment for industrial use, our products are sourced from reputable manufacturers, ensuring safety, efficiency, and longevity. Our goal is to provide reliable and innovative electrical solutions that enhance the functionality and comfort of your spaces.
+
+(Note: The mention of projects requiring approval according to law is implied but not directly stated in the paragraphs to maintain a natural flow. This information can be included separately in documentation or disclaimers as needed.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Images -->
+                <div class="w-full md:w-1/2 px-4 flex flex-wrap">
+                    <div class="w-1/2 p-2">
+                        <img src="./assets/pic1.jpg" alt="Image 1" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-1/2 p-2">
+                        <img src="./assets/pic2.jpg" alt="Image 2" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-1/2 p-2">
+                        <img src="./assets/pic3.jpg" alt="Image 3" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-1/2 p-2">
+                        <img src="./assets/pic4.jpg" alt="Image 4" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <Section id="contact" class=" bg-cover-contact bg-gray-800 text-white py-20 ">
+       
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <h3 class="text-2xl font-bold mb-4">Get In Touch</h3>
+                    <p>If you have any questions, feel free to reach out to us. We're here to help!</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-white hover:text-blue-500">
+                            <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-500">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-500">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-500">
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <form onsubmit="window.location.reload();">
+                        <div class="mb-4">
+                            <label class="block mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-2 text-gray-900" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 text-gray-900" placeholder="Your Email">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2">Message</label>
+                            <textarea class="w-full px-4 py-2 text-gray-900" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-black py-2 px-4 rounded-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </Section>
+
+    <!-- Footer -->
+<footer class="bg-footer text-white py-6 flex items-center justify-between">
+    <div class="container mx-auto px-6 flex items-center">
+        <img src="./assets/logo.png" alt="Logo" class="h-8 mr-2">
+        <div>
+            <h2 class="text-sm md:text-lg font-bold">Limited liability company (natural person sole proprietorship)</h2>
+            <p class="text-xs md:text-base">November 07, 2019</p>
+            <p class="text-xs md:text-base">Room 407, No. 2, Huanxi West Road, Tianhe District, Guangzhou (office only)</p>
+        </div>
+    </div>
+    <div class="container mx-auto px-6">
+        <p class="text-center mx-4 text-xs md:text-base">© 2024 Huaiyuan County Xinyue Materials Trading Co., Ltd. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" class="fixed bottom-5 right-5 bg-white text-black p-2 rounded-full shadow-md">
+        Top ↑
+    </button>
+</body>
+</html>
