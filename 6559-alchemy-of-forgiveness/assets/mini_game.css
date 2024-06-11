@@ -1,0 +1,581 @@
+.d-lg-flex {
+  overflow: hidden;
+}
+
+#bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ball */
+.ball {
+  top: 85%;
+  left: 60.5%;
+  transform: translateX(-50%);
+}
+
+.ball img {
+  width: 40%;
+}
+
+.revert {
+  transform: none;
+}
+
+/* goalkeeper */
+.goalkeeper {
+  position: relative;
+  top: 45%;
+  left: 55%;
+  transform: translateX(-50%);
+  animation: run 2.5s linear infinite;
+}
+
+.goalkeeper .pause {
+  animation-play-state: paused;
+}
+
+.goalkeeper img {
+  width: 40vw;
+}
+
+@-webkit-keyframes run {
+  0% {
+    left: 50%;
+  }
+
+  30% {
+    left: 90%;
+  }
+
+  75% {
+    left: 25%
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+
+/* vertical bar */
+/* vert bar */
+.containers {
+  width: 10vw;
+  /* Width of the vertical bar */
+  height: 22vh;
+  /* Height of the vertical bar, equal to viewport height */
+  position: fixed;
+  top: 67.5%;
+  left: 2%;
+  /* Positioned at the left side of the screen */
+  display: flex;
+  flex-direction: column-reverse;
+  /* Reverse the direction of stacking */
+}
+
+.layer {
+  margin-top: 1.5px;
+  padding-top: 10px;
+  width: 100%;
+  height: 1.35vh;
+  /* Height of each layer */
+  box-sizing: border-box;
+  display: none;
+}
+
+.layer:nth-child(10) {
+  background: rgba(197, 38, 10, 0.7) 90%
+}
+
+.layer:nth-child(9) {
+  background: rgba(255, 0, 0, 0.7) 80%
+}
+
+.layer:nth-child(8) {
+  background: rgba(241, 112, 6, 0.7) 70%
+}
+
+.layer:nth-child(7) {
+  background: rgba(231, 204, 5, 0.7) 60%
+}
+
+.layer:nth-child(6) {
+  background: rgba(208, 222, 33, 0.7) 5%
+}
+
+.layer:nth-child(5) {
+  background: rgba(164, 232, 5, 0.7) 40%
+}
+
+.layer:nth-child(4) {
+  background: rgba(79, 220, 74, 0.7) 30%
+}
+
+.layer:nth-child(3) {
+  background: rgba(63, 218, 216, 0.7) 20%
+}
+
+.layer:nth-child(2) {
+  background: rgba(47, 201, 226, 0.7) 10%
+}
+
+.layer:nth-child(1) {
+  background: rgba(28, 127, 238, 0.7) 0%
+}
+
+/* progress bar */
+[role="progressbar"] {
+  z-index: 2;
+  position: absolute;
+  --percentage: var(--value);
+  --primary: rgba(255, 0, 0, 1);
+  --secondary: rgba(164, 232, 5, 1);
+  width: 48vw;
+  aspect-ratio: 1.8 / 1;
+  border-radius: 50% / 100% 100% 0 0;
+  top: 80%;
+  left: 25%;
+  overflow: hidden;
+  display: none;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(from 0.5turn at 50% 100%, var(--primary) calc(var(--percentage) * 1% / 2), var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%));
+  mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(at 50% 100%, #0000 64%, #000 64.5%);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  color: var(--primary);
+}
+
+/* Meter */
+.meter {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.meter img {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 70vw;
+  min-height: 15vh;
+}
+
+/* icon */
+.icon-container img {
+  width: 19vw;
+  max-width: 300px;
+  animation-timing-function: linear;
+}
+
+.hidden {
+  display: none;
+}
+
+.left {
+  top: 59%;
+  left: 17%;
+  animation: ease floatLeft 0.8s infinite;
+}
+
+.leftTop {
+  top: 41%;
+  left: 17%;
+  animation: floatLeftTop 1.2s infinite;
+}
+
+.right {
+  top: 59%;
+  left: 69%;
+  animation: floatRight 0.8s infinite;
+}
+
+.rightTop {
+  top: 41%;
+  left: 68%;
+  animation: floatRightTop 1.2s infinite;
+}
+
+@keyframes floatLeft {
+  0% {
+    transform: translate(-.35vw, -.35vh);
+  }
+
+  25% {
+    transform: translate(.35vw, -.35vh);
+  }
+
+  50% {
+    transform: translate(.35vw, .35vh);
+  }
+
+  75% {
+    transform: translate(-.35vw, .35vh);
+  }
+
+  100% {
+    transform: translate(-.35vw, -.35vh);
+  }
+}
+
+@keyframes floatLeftTop {
+  0% {
+    transform: translate(.35vw, .35vh);
+  }
+
+  25% {
+    transform: translate(-.35vw, -.35vh);
+  }
+
+  50% {
+    transform: translate(.35vw, .35vh);
+  }
+
+  75% {
+    transform: translate(-.35vw, -.35vh);
+  }
+
+  100% {
+    transform: translate(.35vw, .35vh);
+  }
+}
+
+@keyframes floatRight {
+  0% {
+    transform: translate(.35vw, .35vh);
+  }
+
+  25% {
+    transform: translate(-.35vw, -.35vh);
+  }
+
+  50% {
+    transform: translate(-.35vw, .35vh);
+  }
+
+  75% {
+    transform: translate(.35vw, -.35vh);
+  }
+
+  100% {
+    transform: translate(.35vw, .35vh);
+  }
+}
+
+@keyframes floatRightTop {
+  0% {
+    transform: translate(-.35vw, -.35vh);
+  }
+
+  25% {
+    transform: translate(.35vw, -.35vh);
+  }
+
+  50% {
+    transform: translate(.35vw, .35vh);
+  }
+
+  75% {
+    transform: translate(-.35vw, .35vh);
+  }
+
+  100% {
+    transform: translate(-.35vw, -.35vh);
+  }
+}
+
+/* ball movement */
+@keyframes leftAndRotate {
+  0% {
+    transform: translate(0%, 0%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-35vw, -280%) rotate(720deg);
+  }
+}
+
+@keyframes leftTopAndRotate {
+  0% {
+    transform: translate(0%, 0%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-26vw, -450%) rotate(720deg);
+  }
+}
+
+@keyframes rightAndRotate {
+  0% {
+    transform: translate(0%, 0%) rotate(0);
+  }
+
+  100% {
+    transform: translate(35vw, -280%) rotate(720deg);
+  }
+}
+
+@keyframes rightTopAndRotate {
+  0% {
+    transform: translate(0%, 0%) rotate(0);
+  }
+
+  100% {
+    transform: translate(26vw, -450%) rotate(720deg);
+  }
+}
+
+/* Responsive styles for desktop */
+@media only screen and (min-width: 768px) {
+
+  /* ball movement */
+  @keyframes leftAndRotate {
+    0% {
+      transform: translate(0%, 0%) rotate(0);
+    }
+
+    100% {
+      transform: translate(-35vw, -280%) rotate(720deg);
+    }
+  }
+
+  @keyframes leftTopAndRotate {
+    0% {
+      transform: translate(0%, 0%) rotate(0);
+    }
+
+    100% {
+      transform: translate(-35vw, -450%) rotate(720deg);
+    }
+  }
+
+  @keyframes rightAndRotate {
+    0% {
+      transform: translate(0%, 0%) rotate(0);
+    }
+
+    100% {
+      transform: translate(35vw, -280%) rotate(720deg);
+    }
+  }
+
+  @keyframes rightTopAndRotate {
+    0% {
+      transform: translate(0%, 0%) rotate(0);
+    }
+
+    100% {
+      transform: translate(35vw, -450%) rotate(720deg);
+    }
+  }
+}
+
+
+
+/* large devices (mobile, 1023px and below) */
+@media (max-width: 1025px) {
+  .goalkeeper {
+    top: 41%;
+  }
+
+  .goalkeeper img {
+    width: 55vw;
+  }
+
+  .ball {
+    top: 85%;
+  }
+
+  .meter {
+    top: 80%;
+  }
+
+  [role="progressbar"] {
+    top: 75.5%;
+  }
+
+  .containers {
+    top: 64.5%;
+    height: 30vh;
+  }
+
+  .layer {
+    height: 2vh;
+  }
+}
+
+/* devices (mobile, 768px and below) */
+@media (max-width: 769px) {
+  .goalkeeper {
+    top: 39%;
+  }
+
+  .goalkeeper img {
+    width: 60vw;
+  }
+
+  .ball {
+    top: 86%;
+  }
+  .meter {
+    top: 80%;
+  }
+
+  [role="progressbar"] {
+    top: 76.5%;
+  }
+
+  .containers {
+    top: 81.5%;
+    height: 30vh;
+  }
+
+  .layer {
+    height: 2vh;
+  }
+}
+
+/* devices (mobile, 579px and below) */
+@media (max-width: 539px) {
+  .goalkeeper {
+    top: 64%;
+  }
+
+  .goalkeeper img {
+    width: 63vw;
+  }
+
+  .ball {
+    top: 88%;
+  }
+
+  .meter {
+    top: 82%;
+  }
+
+  [role="progressbar"] {
+    top: 76.5%;
+  }
+
+  .containers {
+    top: 82.5%;
+    height: 22vh;
+  }
+
+  .layer {
+    height: 1.35vh;
+  }
+}
+
+/* Small devices (mobile, 424px and below) */
+@media (max-width: 431px) {
+  .goalkeeper {
+    top: 43%;
+  }
+
+  .goalkeeper img {
+    width: 66vw;
+  }
+
+  .ball {
+    top: 87%;
+  }
+
+  .meter {
+    top: 79%;
+  }
+
+  [role="progressbar"] {
+    top: 76.5%;
+  }
+
+  .containers {
+    top: 73.5%;
+    height: 22vh;
+  }
+
+  .layer {
+    height: 1.35vh;
+  }
+}
+
+/* Small devices (mobile, 374px and below) */
+@media (max-width: 376px) {
+  .goalkeeper {
+    top: 43%;
+  }
+
+  .goalkeeper img {
+    width: 68vw;
+  }
+
+  .ball {
+    top: 86%;
+  }
+
+  .meter {
+    top: 78%;
+  }
+
+  [role="progressbar"] {
+    top: 74%;
+  }
+
+  .containers {
+    top: 73%;
+    height: 22vh;
+  }
+
+  .layer {
+    height: 1.35vh;
+  }
+}
+
+/* Small devices (mobile, 320px and below) */
+@media (max-width: 321px) {
+  .goalkeeper {
+    top: 44%;
+  }
+
+  .goalkeeper img {
+    width: 72vw;
+  }
+
+  .ball {
+    top: 82%;
+  }
+
+  .meter {
+    top: 72%;
+  }
+
+  [role="progressbar"] {
+    top: 76%;
+  }
+
+  .containers {
+    top: 70.5%;
+    height: 17vh;
+  }
+
+  .layer {
+    height: 0.6vh;
+  }
+}
+
+.modal-open
+{
+  padding-right:  0px !important;
+}
