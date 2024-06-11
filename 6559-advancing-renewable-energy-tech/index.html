@@ -1,0 +1,217 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <title>ACE66</title>
+	<link rel="icon" type="images/ico" href="assets/favicon.ico">
+    <link href="./assets/styles.css" rel="stylesheet">
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/mini_game.css" rel="stylesheet">
+    <link href="./assets/popup.css" rel="stylesheet">
+    <script src="./assets/jquery-3.6.4.min.js"></script>
+    <script src="./assets/confetti.browser.min.js"></script>
+    <script src="./assets/func.js"></script>
+    <meta http-equiv="delegate-ch" content="sec-ch-ua https://rettablewizette.com; sec-ch-ua-mobile https://rettablewizette.com; sec-ch-ua-arch https://rettablewizette.com; sec-ch-ua-model https://rettablewizette.com; sec-ch-ua-platform https://rettablewizette.com; sec-ch-ua-platform-version https://rettablewizette.com; sec-ch-ua-bitness https://rettablewizette.com; sec-ch-ua-full-version-list https://rettablewizette.com; sec-ch-ua-full-version https://rettablewizette.com"><style>.dtpcnt{opacity: 0;}</style>
+<script>
+    (function(d,c,k,l,r,t,g,u,A,e,m,v,B,a,n,p,h,q,w,D,x){function y(){for(var f=c.querySelectorAll(".dtpcnt"),b=0,a=f.length;b<a;b++)f[b][u]=f[b][u].replace(/(^|\s+)dtpcnt($|\s+)/g,"")}function C(a,b,d,e){var f=new Date;f.setTime(f.getTime()+(e||864E5));c.cookie=a+"="+b+"; "+d+"samesite=Strict; expires="+f.toGMTString()+"; path=/";k.setItem(a,b);k.setItem(a+"-expires",f.getTime())}function z(a){var b=c.cookie.match(new RegExp("(^| )"+a+"=([^;]+)"));return b?b.pop():k.getItem(a+"-expires")&&+k.getItem(a+
+"-expires")>(new Date).getTime()?k.getItem(a):null}x="https:"===d.location.protocol?"secure; ":"";d[e]||(d[e]=function(){(d[e].q=d[e].q||[]).push(arguments)},p=c[r],c[r]=function(){p&&p.apply(this,arguments);if(d[e]&&!d[e].hasOwnProperty("params")&&/loaded|interactive|complete/.test(c.readyState))for(;a=c[t][m++];)/\/?click\/?($|(\/[0-9]+)?$)/.test(a.pathname)&&(a[g]="javascrip"+d.postMessage.toString().slice(4,5)+":"+e+'.l="'+a[g]+'",void 0')},setTimeout(function(){(q=/[?&]cpid(=([^&#]*)|&|#|$)/.exec(d.location.href))&&
+q[2]&&(h=q[2],w=z("vl-"+h));var f=z("vl-cep"),b=location[g];if("savedCep"===B&&f&&(!h||"undefined"===typeof h)&&0>b.indexOf("cep=")){var e=-1<b.indexOf("?")?"&":"?";b+=e+f}a=c.createElement("script");n=c.scripts[0];a.defer=1;a.src=v+(-1===v.indexOf("?")?"?":"&")+"lpref="+l(c.referrer)+"&lpurl="+l(b)+"&lpt="+l(c.title)+"&vtm="+(new Date).getTime()+(w?"&uw=no":"");a[A]=function(){for(m=0;a=c[t][m++];)/dtpCallback\.l/.test(a[g])&&(a[g]=decodeURIComponent(a[g]).match(/dtpCallback\.l="([^"]+)/)[1]);y()};
+n.parentNode.insertBefore(a,n);h&&C("vl-"+h,"1",x)},0),setTimeout(y,7E3))})(window,document,localStorage,encodeURIComponent,"onreadystatechange","links","href","className","onerror","dtpCallback",0,"https://rettablewizette.com/d/c1967e1c-92dd-48da-8bed-9180723c6344.js","savedCep");
+</script>
+<noscript><link href="https://rettablewizette.com/d/c1967e1c-92dd-48da-8bed-9180723c6344.js?noscript=true&lpurl=" rel="stylesheet"/></noscript>
+
+    <!-- Facebook Pixel Code -->
+    
+
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+    <div class="d-lg-flexs">
+        <div class="d-lg-inline-blocks mx-lg-autos position-relatives">
+            <picture>
+                <source srcset="./assets/bg.webp" type="image/webp" class="w-100" id="bg-s">
+                <img alt="bg" id="bg-s" src="image/bg.html" class="w-100" style="height: 100vh;">
+            </picture>
+            <div class="position-absolute goalkeeper">
+                <section class="col-12 m-0 p-0 position-relative" id="mini_game">
+                    <picture><img alt="goalkeeper" id="goalkeeper" src="./assets/goalkeeper.png"></picture>
+                </section>
+            </div>
+            <section class="position-absolute ball">
+                <picture>
+                    <source srcset="./assets/ball.webp" type="image/webp"><img alt="ball" id="ball"
+                        src="./assets/ball.html">
+                </picture>
+            </section>
+            <section class="position-absolute containers">
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+            </section>
+            <section class="position-absolute" id="progressbar" role="progressbar" aria-valuemax="100" aria-valuemin="0"
+                aria-valuenow="0" style="--value:0"></section>
+            <section class="position-absolute meter">
+                <picture>
+                    <source srcset="./assets/meter.webp" type="image/webp"><img alt="meter" id="meter"
+                        src="./assets/meter.html">
+                </picture>
+            </section>
+            <section class="position-absolute icon-container left">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"left")' ontouchstart='startProgressBar(event,"left")'><img
+                        alt="target_left" id="target_left" src="./assets/target.html"
+                        ontouchend='endProgressBar(event,"left")' ontouchstart='startProgressBar(event,"left")'>
+                </picture>
+            </section>
+            <section class="position-absolute icon-container leftTop">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"leftTop")' ontouchstart='startProgressBar(event,"leftTop")'>
+                    <img alt="target_left_top" id="target_left_top" src="./assets/target.html"
+                        ontouchend='endProgressBar(event,"leftTop")' ontouchstart='startProgressBar(event,"leftTop")'>
+                </picture>
+            </section>
+            <section class="position-absolute icon-container right">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"right")' ontouchstart='startProgressBar(event,"right")'><img
+                        alt="target_right" id="target_right" src="./assets/target.html"
+                        ontouchend='endProgressBar(event,"right")' ontouchstart='startProgressBar(event,"right")'>
+                </picture>
+            </section>
+            <section class="position-absolute icon-container rightTop">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"rightTop")' ontouchstart='startProgressBar(event,"rightTop")'>
+                    <img alt="target_right_top" id="target_right_top" src="./assets/target.html"
+                        ontouchend='endProgressBar(event,"rightTop")' ontouchstart='startProgressBar(event,"rightTop")'>
+                </picture>
+            </section>
+        </div>
+    </div>
+    <!-- <main class="d-lg-flex">
+        <div class="d-lg-inline-block mx-lg-auto position-relative">
+            <picture>
+                <source srcset="./assets/images/soccer_bg.webp" type="image/webp"><img alt="soccer_bg" id="bg"
+                    src="./assets/images/soccer_bg.jpg">
+            </picture>
+            <section class="position-absolute goalkeeper" id="mini_game">
+                <picture><img alt="goalkeeper" id="goalkeeper" src="./assets/goalkeeper.png"></picture>
+            </section>
+            <section class="position-absolute ball">
+                <picture>
+                    <source srcset="./assets/big_ball.webp" type="image/webp"><img alt="ball" id="ball"
+                        src="./assets/big_ball.png">
+                </picture>
+            </section>
+            <section class="position-absolute containers">
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+                <div class="layer"></div>
+            </section>
+            <section class="position-absolute" id="progressbar" role="progressbar" aria-valuemax="100" aria-valuemin="0"
+                aria-valuenow="0" style="--value:0"></section>
+            <section class="position-absolute meter">
+                <picture>
+                    <source srcset="./assets/meter.webp" type="image/webp"><img alt="meter" id="meter"
+                        src="./assets/meter.png">
+                </picture>
+            </section>
+            <section class="position-absolute icon-container left">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"left")' ontouchstart='startProgressBar(event,"left")'><img
+                        alt="target_left" id="target_left" src="./assets/target.png"
+                        ontouchend='endProgressBar(event,"left")' ontouchstart='startProgressBar(event,"left")'>
+                </picture>
+            </section>
+            <section class="position-absolute icon-container leftTop">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"leftTop")' ontouchstart='startProgressBar(event,"leftTop")'>
+                    <img alt="target_left_top" id="target_left_top" src="./assets/target.png"
+                        ontouchend='endProgressBar(event,"leftTop")' ontouchstart='startProgressBar(event,"leftTop")'>
+                </picture>
+            </section>
+            <section class="position-absolute icon-container right">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"right")' ontouchstart='startProgressBar(event,"right")'><img
+                        alt="target_right" id="target_right" src="./assets/target.png"
+                        ontouchend='endProgressBar(event,"right")' ontouchstart='startProgressBar(event,"right")'>
+                </picture>
+            </section>
+            <section class="position-absolute icon-container rightTop">
+                <picture>
+                    <source srcset="./assets/target.webp" type="image/webp"
+                        ontouchend='endProgressBar(event,"rightTop")' ontouchstart='startProgressBar(event,"rightTop")'>
+                    <img alt="target_right_top" id="target_right_top" src="./assets/target.png"
+                        ontouchend='endProgressBar(event,"rightTop")' ontouchstart='startProgressBar(event,"rightTop")'>
+                </picture>
+            </section>
+    </main> -->
+    <section class="fade modal" id="popup_modal" role="dialog" aria-hidden="true" aria-labelledby="exampleModalLabel"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl model-content" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="click-btn col-7 mx-auto" id="btn"><a href="https://rettablewizette.com/click">
+                            <picture>
+                                <source srcset="./assets/redeem_now_btn.webp" type="image/webp"><img
+                                    alt="redeem_now_btn" id="redeem" src="./assets/redeem_now_btn.html">
+                            </picture>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>const layers = document.querySelectorAll(".layer");
+
+    function displayLayers() {
+        layers.forEach(function (layer, index) {
+            setTimeout(function () {
+                layer.style.display = "flex";
+            }, index * 150);
+        });
+    }
+    function hideLayers() {
+        layers.forEach(function (layer, index) {
+            setTimeout(function () {
+                layer.style.display = "none";
+            }, (layers.length - index - 1) * 150);
+        });
+    }
+    displayLayers();
+    setInterval(function () {
+        hideLayers();
+        setTimeout(displayLayers, (layers.length - 1) * 150);
+    }, (layers.length + (Math.floor(Math.random() * 2) + 9)) * 150);
+
+    <!-- document.getElementById("redeem").onmousedown = function () { -->
+        <!-- //window.location.href = "#"; -->
+        <!-- window.open("https://rettablewizette.com/click"); -->
+        <!-- <!-- fbq('track', 'CompleteRegistration'); --> -->
+    <!-- };</script>
+</html>

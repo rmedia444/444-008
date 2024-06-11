@@ -1,0 +1,40 @@
+* {
+    /* border: 2px solid red; */
+    font-family: sans-serif;
+}
+
+/*-------------------------------------------Redirect Button---------------------------------------------*/
+.redirect-btn {
+    top: 19.5%;
+}
+
+.redirect-btn img {
+    width: 67%;
+    max-width: 599px;
+}
+
+.redirect-btn img {
+    animation: pulse 0.6s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #bg-s {
+        height: 100vh;
+    }
+}

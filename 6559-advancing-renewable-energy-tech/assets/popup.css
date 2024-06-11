@@ -1,0 +1,92 @@
+.modal .modal-dialog {
+    background-image: url(./popup.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 93%;
+    padding: 2%;
+    
+}
+
+.modal-content {
+    background-color: unset !important;
+}
+
+.modal-body {
+    padding-top: 51%;
+}
+
+#redeem {
+    width: 60vw;
+    animation-name: pulse;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* large devices (mobile, 1023px and below) */
+@media (max-width: 1025px) {
+    #redeem {
+        width: 41vw;
+    }
+  }
+
+  /* large devices (mobile, 820px and below) */
+@media (max-width: 913px) {
+    #redeem {
+        width: 31vw;
+    }
+  }
+
+/* large devices (mobile, 820px and below) */
+@media (max-width: 854px) {
+    #redeem {
+        width: 34.5vw;
+    }
+  }
+  
+  /* devices (mobile, 768px and below) */
+  @media (max-width: 769px) {
+    #redeem {
+        width: 36vw;
+    }
+  }
+  
+  /* devices (mobile, 579px and below) */
+  @media (max-width: 580px) {
+    #redeem {
+        width: 50vw;
+    }
+  }
+  
+  /* Small devices (mobile, 424px and below) */
+  @media (max-width: 425px) {
+    #redeem {
+        width: 50vw;
+    }
+  }
+  
+  /* Small devices (mobile, 374px and below) */
+  @media (max-width: 376px) {
+    #redeem {
+        width: 50vw;
+    }
+  }
+  
+  /* Small devices (mobile, 320px and below) */
+  @media (max-width: 321px) {
+    #redeem {
+        width: 50vw;
+    }
+    .modal .modal-dialog {
+      background-image: url(./popup.webp);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 300px;
+      padding: 2%;
+      
+  }
+  }
+  
+  
